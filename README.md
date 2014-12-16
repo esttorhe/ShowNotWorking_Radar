@@ -12,5 +12,8 @@ If used on an iPhone (other than an iPhone 6/6+ showing a master detail) a `Show
 However this behavior is broken with "retrocompatibility" issues when running `iOS 7`. 
 Weirdly enough this only happens when we first push a `UIViewController` via code and then call a `Show` segue from that pushed VC; the `UINavigationController` of this child VC gets lost and the `Show` segue will present the `UIViewController` modally.
 
-#Expected results
+#What's Happening?
 When running this example app on `iOS 8` you'll notice that both `UIViewController`s are pushed into the stack and the last one will display a `UIActivityController` whereas running this on `iOS 7.1` will result on the last `UIViewController` being presented modally and no `UIActivityController` will be displayed due to the lack of a `navigationController` property on the last child view controller.
+
+#Expected Results
+In this case we are displaying only the "master"; thus, the child `UIViewCotnroller` should be pushed on top of the current view controller stack on `iOS7` and `iOS8`.
