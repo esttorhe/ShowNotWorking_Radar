@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C81f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ler-M8-aIR">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="5KP-md-TTg">
+            <objects>
+                <navigationController id="Ler-M8-aIR" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3mz-kU-5la">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="q1J-zM-r9I" kind="relationship" relationship="rootViewController" id="rnC-EL-C8P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pBa-4Q-Ugl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1839" y="330"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IEM-uV-Um5">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="rsP-fI-9d7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7ci-qf-TUc"/>
+                        <viewControllerLayoutGuide type="bottom" id="PUJ-Xc-5vL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jEP-BC-n8w">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U98-p7-VmJ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Push View Controller (Show)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gq8-BC-d6m" kind="show" id="lYy-qh-eLU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="U98-p7-VmJ" secondAttribute="centerX" id="AEl-GR-TTM"/>
+                            <constraint firstAttribute="centerY" secondItem="U98-p7-VmJ" secondAttribute="centerY" id="rCb-Zt-ac0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="U98-p7-VmJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="AEl-GR-TTM"/>
+                                <exclude reference="rCb-Zt-ac0"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="U98-p7-VmJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="AEl-GR-TTM"/>
+                                <include reference="rCb-Zt-ac0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="eTJ-jx-zQC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N7T-yJ-rxz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-277.5" y="330"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rT3-eD-EbR">
+            <objects>
+                <viewController id="gq8-BC-d6m" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P0F-Di-YNP"/>
+                        <viewControllerLayoutGuide type="bottom" id="mZQ-tP-yg7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bNM-uD-rzu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vn-BL-9cf">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <string key="text">I should present a UIActivityController from the 
+navigationController
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5vn-BL-9cf" secondAttribute="trailing" constant="19" id="45j-Fe-orP"/>
+                            <constraint firstAttribute="centerY" secondItem="5vn-BL-9cf" secondAttribute="centerY" id="JS5-ib-YGZ"/>
+                            <constraint firstItem="5vn-BL-9cf" firstAttribute="leading" secondItem="bNM-uD-rzu" secondAttribute="leading" constant="19" id="mi8-ri-Z1O"/>
+                            <constraint firstAttribute="centerX" secondItem="5vn-BL-9cf" secondAttribute="centerX" id="o4J-N7-jYQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="5vn-BL-9cf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="45j-Fe-orP"/>
+                                <exclude reference="JS5-ib-YGZ"/>
+                                <exclude reference="mi8-ri-Z1O"/>
+                                <exclude reference="o4J-N7-jYQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="5vn-BL-9cf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="45j-Fe-orP"/>
+                                <include reference="JS5-ib-YGZ"/>
+                                <include reference="mi8-ri-Z1O"/>
+                                <include reference="o4J-N7-jYQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j3S-ZO-wrB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565.5" y="330"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="YaR-A5-v4Q">
+            <objects>
+                <viewController id="q1J-zM-r9I" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2F4-HK-eE8"/>
+                        <viewControllerLayoutGuide type="bottom" id="1mr-5H-HjE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NAg-ZF-ddZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8G-dN-EPF">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Push View Controller (Show)">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushButton_tapped:" destination="q1J-zM-r9I" eventType="touchUpInside" id="YUO-eR-8QU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="G8G-dN-EPF" secondAttribute="centerY" id="WPy-gg-Led"/>
+                            <constraint firstAttribute="centerX" secondItem="G8G-dN-EPF" secondAttribute="centerX" id="quG-A9-WIh"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="G8G-dN-EPF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="WPy-gg-Led"/>
+                                <exclude reference="quG-A9-WIh"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="G8G-dN-EPF"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="WPy-gg-Led"/>
+                                <include reference="quG-A9-WIh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="rld-lm-aMR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wvs-bc-uBj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1050" y="330"/>
+        </scene>
+    </scenes>
+</document>
